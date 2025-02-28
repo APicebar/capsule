@@ -1,14 +1,20 @@
 {
   "name": "capsule",
   "version": "1.0.50",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "bun run --watch src/index.ts"
   },
   "dependencies": {
-    "elysia": "latest"
+    "@mikro-orm/core": "^6.4.7",
+    "@mikro-orm/libsql": "^6.4.7",
+    "@mikro-orm/sql-highlighter": "^1.0.1",
+    "elysia": "latest",
+    "elysia-rate-limit": "^4.1.0"
   },
   "devDependencies": {
+    "@types/node": "^22.13.5",
     "bun-types": "latest"
   },
   "module": "src/index.js"
