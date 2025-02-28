@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts"
   },
   "dependencies": {
     "@mikro-orm/core": "^6.4.7",
