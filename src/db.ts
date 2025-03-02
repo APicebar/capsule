@@ -25,10 +25,12 @@ export async function initORM(options?: Options): Promise<Services> {
         ...options,
     });
 
+    await orm.schema.refreshDatabase();
+
     // save to cache before returning
     return cache = {
         orm,
-        em: orm.em,
+        em: orm.em.fork(),
         user: orm.em.getRepository(User),
         capsule: orm.em.getRepository(Capsule),
         session: orm.em.getRepository(Session),
